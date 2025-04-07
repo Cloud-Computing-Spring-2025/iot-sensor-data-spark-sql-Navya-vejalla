@@ -163,7 +163,12 @@ Average temperature by hour:
 
 ## 🚀 Running the Project
 
-### 1. Install Dependencies
+### Install Dependencies
 Install the necessary Python libraries:
 ```bash
 pip install pyspark faker
+```
+### Data generator and main code running 
+```bash
+python data_generator.py
+python main.py
