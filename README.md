@@ -45,7 +45,7 @@ This project analyzes synthetic IoT sensor data using Apache Spark (PySpark). Th
   - Distinct locations
 
 **Output File:** `task1_output.csv`
-
+```bash
 +---------+-------------------+-----------+--------+----------------+-----------+
 |sensor_id|          timestamp|temperature|humidity|        location|sensor_type|
 +---------+-------------------+-----------+--------+----------------+-----------+
@@ -55,6 +55,7 @@ This project analyzes synthetic IoT sensor data using Apache Spark (PySpark). Th
 |     1045|2025-04-02 21:43:04|      21.39|   51.32|BuildingA_Floor2|      TypeB|
 |     1018|2025-04-07 12:20:34|      17.49|   57.83|BuildingB_Floor1|      TypeB|
 +---------+-------------------+-----------+--------+----------------+-----------+
+```
 ---
 
 ### 📌 Task 2: Filtering & Aggregations
@@ -72,6 +73,7 @@ This project analyzes synthetic IoT sensor data using Apache Spark (PySpark). Th
 In-range temperature count: 620
 Out-of-range temperature count: 380
 Average temperature & humidity by location:
+```bash
 +----------------+------------------+------------------+
 |        location|   avg_temperature|      avg_humidity|
 +----------------+------------------+------------------+
@@ -80,7 +82,7 @@ Average temperature & humidity by location:
 |BuildingB_Floor2| 25.08088495575221|54.522123893805315|
 |BuildingB_Floor1| 24.54314285714287| 55.37008163265307|
 +----------------+------------------+------------------+
-
+```
 ---
 
 ### 📌 Task 3: Time-Based Analysis
@@ -93,6 +95,7 @@ Average temperature & humidity by location:
 - Group by hour and calculate the **average temperature**
 
 **Output File:** `task3_output.csv`
+```bash
 Average temperature by hour:
 +-----------+------------------+
 |hour_of_day|          avg_temp|
@@ -118,6 +121,7 @@ Average temperature by hour:
 |         18|25.645714285714288|
 |         19| 25.31209302325582|
 +-----------+------------------+
+```
 ---
 
 ### 📌 Task 4: Sensor Ranking by Temperature
@@ -130,6 +134,7 @@ Average temperature by hour:
 - Show top 5 sensors
 
 **Output File:** `task4_output.csv`
+```bash
 +---------+------------------+---------+
 |sensor_id|          avg_temp|rank_temp|
 +---------+------------------+---------+
@@ -139,6 +144,7 @@ Average temperature by hour:
 |     1042|28.126875000000002|        4|
 |     1020|          28.07375|        5|
 +---------+------------------+---------+
+```
 ---
 
 ### 📌 Task 5: Pivot Table by Location and Hour
@@ -151,6 +157,7 @@ Average temperature by hour:
 - Create a **pivot table**
 
 **Output File:** `task5_output.csv`
+```bash
 +------------------+-------+-------+-----+-------+
 | location         |   0   |   1   | ... |  23   |
 +------------------+-------+-------+-----+-------+
@@ -159,6 +166,7 @@ Average temperature by hour:
 | BuildingB_Floor1 | 25.30 | 23.70 | ... | 23.64 |
 | BuildingB_Floor2 | 27.81 | 27.14 | ... | 23.45 |
 +------------------+-------+-------+-----+-------+
+```
 ---
 
 ## 🚀 Running the Project
